@@ -9,7 +9,6 @@ class RecipesController < ApplicationController
     @recipe = Recipe.new
   end
 
-
   def create
     @recipe = Recipe.new(form_params.merge(user: current_user))
 
