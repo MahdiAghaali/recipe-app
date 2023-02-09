@@ -22,7 +22,6 @@
 </div>
   <% if can? :manage, @recipe %>
   <%= form_with(model: RecipeFood.new, url: recipe_recipe_foods_url(recipe_id:@recipe.id), class:"recipe-form") do |f| %>
-    <%= link_to("Shopping list", shopping_list_path, method: :get, data: { turbo_method: :get }, class:"btn btn_shopping_list") %>
     <div class="form-group">
       Food: 
       <%= f.search_field :food, autofocus: true, autocomplete: "ingredient", list: 'foods' %>
