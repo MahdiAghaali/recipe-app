@@ -1,4 +1,12 @@
 class Recipe < ApplicationRecord
-  has_many :RecipeFoods
-  belongs_to :user, class_name: 'User'
+  belongs_to :user
+  has_many :recipe_foods, dependent: :delete_all
+
+  validates :name, presence: true
+  validates :preparation_time, presence: true
+  validates :cooking_time, presence: true
+
+  def foods
+    RecipeFood.where(recipe_id: di)
+  end
 end

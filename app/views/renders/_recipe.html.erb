@@ -1,0 +1,14 @@
+<div class="recipe-card">
+<div class="recipe-head">
+<h2><%=recipe.name%></h2>
+<div class="buttons-cont">
+   <%= button_to 'Remove', recipe_path(id: recipe.id), method: :delete, class: 'btn delete' %>
+   <%= link_to 'Details', recipe_path(id: recipe.id)%>
+</div>
+</div>
+<div class="desc-cont">
+<p class="description">
+<%=recipe.description%>
+</p>
+</div>
+</div>
