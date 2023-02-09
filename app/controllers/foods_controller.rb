@@ -18,6 +18,17 @@ class FoodsController < ApplicationController
     end
   end
 
+  def shopping_list
+    sql = 'Select b.name, b.measurement_unit, b.price, sum(a.quantity) as quantity from
+      recipe_foods as a
+      inner join foods as b on a.food_id = b.id
+      inner join recipes as c on a.recipe_id = c.id
+      where c.user_id = ' + current_user.id.to_s + '
+      group by b.name, b.measurement_unit, b.price
+      '
+    @foods = ActiveRecord::Base.connection.execute(sql)
+  end
+
   def destroy
     @food = Food.find(params[:id])
     @food.destroy
