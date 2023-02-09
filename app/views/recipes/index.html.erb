@@ -1,14 +1,6 @@
-<h1>Here is your list of recipes</h1>
-<ul class='posts-list'>
-  <% @recipes.each do |recipe| %>
-    <li>
-      <%= link_to  do %>
-        <%= render 'partials/recipe_card', recipe: recipe %>
-      <% end %>
-      <%= button_to 'Delete recipe', "/recipes/#{recipe.id}", method: :delete %>
-    </li>
-  <% end %>
-</ul>
-<%= link_to new_recipe_path  do %>
-  <button class='add-recipe-button'>ADD A NEW RECIPE</button>
-<% end %>
+<section>
+ <h2>Recipes</h2>
+   <%= link_to("New recipe", new_recipe_path, method: :get, data: { turbo_method: :get }, class: 'btn new-rcp') %>
+</section>
+
+<%= render partial: "renders/recipe", collection: @recipes %>
