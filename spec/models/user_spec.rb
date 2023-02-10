@@ -30,5 +30,4 @@ RSpec.describe 'User sign up' do
       expect(User.new).to_not be_valid
     end
   end
-
 end
