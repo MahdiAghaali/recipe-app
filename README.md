@@ -124,10 +124,6 @@ Clone this repository to your desired folder:
   git clone https://github.com/MahdiAghaali/recipe-app
   cd recipe-app
   bundle install
-  rails db:create
-  rails db:migrate
-  rails db:seed
-  rails server
 
 ```
 -
@@ -151,6 +147,9 @@ To run the project, execute the following command:
 
 
 ```
+  rails db:create
+  rails db:migrate
+  rails db:seed
   rails server
 ```
 
