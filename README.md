@@ -111,6 +111,7 @@ In order to run this project you need:
 
 ```
  gem install rails
+
 ```
 
 
@@ -120,8 +121,14 @@ Clone this repository to your desired folder:
 
 
 ```
-  cd recipe-app
   git clone https://github.com/MahdiAghaali/recipe-app
+  cd recipe-app
+  bundle install
+  rails db:create
+  rails db:migrate
+  rails db:seed
+  rails server
+
 ```
 -
 
