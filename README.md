@@ -79,17 +79,22 @@ The Recipe app keeps track of all your recipes, ingredients, and inventory. It w
 
 ### Key Features <a name="key-features"></a>
 
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-- [Live Demo Link](https://yourdeployedapplicationlink.com)
+- Food list:
+    - display a list of food added by the logged-in user as in the wireframe (for teams with only 2 people - display also quantity of a given food).
+    - lead to a form that allows users to add new food.
+- Recipes list:
+    - display a list of recipes created by the logged-in user as in the wireframe.
+    - lead to recipe details.
+    - If the user is the owner of the recipe, should allow the user to delete it.
+- Public recipe list:
+    - display a list of all public recipes ordered by newest as in the wireframe.
+    - lead to recipe details.
+- Recipe details:
+    - If the recipe is public or the user is the owner of the recipe, display the recipe details as in the wireframe.
+    - If the user is the owner of the recipe, lead to the form that allows the user to add new food.
+- General shopping list view (**only for a group that has less than 3 members**):
+    - show the list of food that is missing for all recipes of the logged-in user (compare the list of food for all recipes with the general food list of that user).
+    - count the total food items and total price of the missing food.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -159,11 +164,18 @@ To run the project, execute the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
-
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- [ ] Inventories list:
+    - Should display a list of inventories created by the logged-in user as in the wireframe.
+    - Should lead to inventory details.
+    - If the user is the owner of the inventory, should allow to delete it.
+- [ ] Inventory details:
+    - Should display the inventory details as in the wireframe.
+    - Should lead to a form that allows users to add new food.
+- [ ] Recipe details:
+    - Should have a modal to choose an inventory to create a shopping list with, as in the wireframe.
+- [ ] Inventory shopping list:
+    - Should show the list of food that is missing by comparing the food in the recipe with the food in the inventory.
+    - Should count the total food items and total price of the missing food.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -187,6 +199,11 @@ If you like this project give it a star on github
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ACKNOWLEDGEMENTS -->
+
+## ACKNOWLEDGEMENTS
+
+We would like to thank:
+- the Microverse team for the great curriculum.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
