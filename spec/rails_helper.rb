@@ -1,11 +1,10 @@
+# This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'spec_helper'
 ENV['RAILS_ENV'] ||= 'test'
 require_relative '../config/environment'
 # Prevent database truncation if the environment is production
-abort('The Rails environment is running in production mode!') if Rails.env.production?
+abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'rspec/rails'
-require 'capybara/rspec'
-
 # Add additional requires below this line. Rails is not loaded until this point!
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
@@ -32,11 +31,10 @@ rescue ActiveRecord::PendingMigrationError => e
 end
 RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
-  config.fixture_path = "#{Rails.root}/spec/fixtures"
-  config.include Devise::Test::IntegrationHelpers, type: :request
-  config.include Devise::Test::ControllerHelpers, type: :controller
-  config.include Devise::Test::ControllerHelpers, type: :view
-  config.include Devise::TestHelpers, type: :controller
+  config.fixture_path = "#{::Rails.root}/spec/fixtures"
+  
+  # config.include Devise::Test::ControllerHelpers, type: :controller
+  # config.include Devise::Test::IntegrationHelpers, type: :request
 
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
@@ -65,13 +63,15 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
-  config.before(:suite) do
-    Rails.application.load_seed # loading seeds
-  end
 
-  Capybara.register_driver :selenium_chrome do |app|
-    Capybara::Selenium::Driver.new(app, browser: :chrome)
-  end
+  # config.before(:each) do
+  #   default_url_options = { host: 'localhost', port: 3000 }
+  # end
 
-  Capybara.javascript_driver = :selenium_chrome
+  # config.after(:each, type: :mailer) do
+  #   if Mail::TestMailer.deliveries.present?
+  #     Mail::TestMailer.deliveries.clear
+  #     ActionMailer::Base.deliveries.clear
+  #   end
+  # end
 end
