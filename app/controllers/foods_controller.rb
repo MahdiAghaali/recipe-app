@@ -19,9 +19,9 @@ class FoodsController < ApplicationController
   end
 
   def shopping_list
-    sql = 'Select b.name, b.measurement_unit, b.price, sum(a.quantity) as quantity from
+    sql = 'Select b.name, b.measurement_unit, b.price as price, sum(a.quantity) - sum(b.quantity) as quantity from
       recipe_foods as a
-      inner join foods as b on a.food_id = b.id
+      left join foods as b on a.food_id = b.id
       inner join recipes as c on a.recipe_id = c.id
       where c.user_id = ' + current_user.id.to_s + '
       group by b.name, b.measurement_unit, b.price
