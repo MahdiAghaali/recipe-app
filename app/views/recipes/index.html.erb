@@ -1,0 +1,6 @@
+<section>
+ <h2>Recipes</h2>
+   <%= link_to("New recipe", new_recipe_path, method: :get, data: { turbo_method: :get }, class: 'btn new-rcp') %>
+</section>
+
+<%= render partial: "renders/recipe", collection: @recipes %>
