@@ -10,7 +10,7 @@ REQUIRED SECTIONS:
 - Table of Contents
 - About the Project
   - Built With
-  - Live Demo
+  - Live Demo (coming soon)
 - Getting Started
 - Authors
 - Future Features
