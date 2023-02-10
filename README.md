@@ -195,7 +195,7 @@ If you like this project give it a star on github
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](https://github.com/MahdiAghaali/recipe-app/blob/development/MIT.md) licensed.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
